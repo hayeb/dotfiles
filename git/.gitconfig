@@ -1,0 +1,13 @@
+[user]
+	name = Haye Böhm
+	useConfigOnly = true
+[core]
+	autocrlf = input
+	excludesfile = /home/haye/.gitignore_global
+[diff]
+	tool = vimdiff
+	renamelimit=0
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
