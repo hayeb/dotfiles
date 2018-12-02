@@ -11,5 +11,4 @@ install:
 	stow vim
 	stow zsh
 	stow git
-	stow zsh
 	stow i3

@@ -48,9 +48,7 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
+# alternatively, you can use the cursor keys: bindsym $mod+Left focus left bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
@@ -116,19 +114,19 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-set $LAPTOPSCREEN "eDP1"
-set $EXTERNALSCREEN "HDMI2"
+set $PRIMARY_SCREEN "DVI-I-1"
+set $SECONDARY_SCREEN "HDMI-0"
 
-workspace 1 output $EXTERNALSCREEN
-workspace 2 output $EXTERNALSCREEN
-workspace 3 output $EXTERNALSCREEN
-workspace 4 output $EXTERNALSCREEN
-workspace 5 output $EXTERNALSCREEN
-workspace 6 output $LAPTOPSCREEN
-workspace 7 output $LAPTOPSCREEN 
-workspace 8 output $LAPTOPSCREEN
-workspace 9 output $LAPTOPSCREEN
-workspace 0 output $LAPTOPSCREEN
+workspace 1 output $PRIMARY_SCREEN
+workspace 2 output $PRIMARY_SCREEN
+workspace 3 output $PRIMARY_SCREEN
+workspace 4 output $PRIMARY_SCREEN
+workspace 5 output $PRIMARY_SCREEN
+workspace 6 output $SECONDARY_SCREEN
+workspace 7 output $SECONDARY_SCREEN 
+workspace 8 output $SECONDARY_SCREEN
+workspace 9 output $SECONDARY_SCREEN
+workspace 0 output $SECONDARY_SCREEN
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -187,15 +185,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id sh -c "pactl set-sink-volume @
 bindsym XF86AudioLowerVolume exec --no-startup-id sh -c "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bindsym XF86AudioMute exec --no-startup-id sh -c "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
-# Keyboard brightness keys
-bindsym XF86KbdBrightnessUp exec --no-startup-id kbdlight up 5
-bindsym XF86KbdBrightnessDown exec --no-startup-id kbdlight down 5
-
-# Xrandr --auto
-bindsym XF86LaunchA exec --no-startup-id xrandr --auto --output eDP1 --mode 1920x1200
-
 # Lock screen
-bindsym $mod+BackSpace exec --no-startup-id i3lock -n -i ~/Backgrounds/tomato.png
+bindsym $mod+BackSpace exec --no-startup-id i3lock -n -i ~/Backgrounds/showgaze_pb_02.png
 
 # Execute ARandr
 bindsym XF86LaunchB exec --no-startup-id arandr
@@ -210,11 +201,9 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 exec --no-startup-id export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
-# Set the resolution to 1920x1200
-exec --no-startup-id xrandr --output eDP1 --mode 1920x1200
 
 # Set the background
-exec --no-startup-id feh --bg-center /home/haye/Backgrounds/tomato.png
+exec --no-startup-id feh --bg-center /home/haye/Backgrounds/showgaze_pb_02.png
 
 client.focused #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
@@ -222,7 +211,7 @@ client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 
 # Automatic locking of screen on suspend/hibernate
-exec --no-startup-id xss-lock -- i3lock -n -i ~/Backgrounds/tomato.png &
+exec --no-startup-id xss-lock -- i3lock -n -i ~/Backgrounds/showgaze_pb_02.png &
 
 # Reduce screen timeout
 exec --no-startup-id xset s 120 120
