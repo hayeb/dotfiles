@@ -201,7 +201,6 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 exec --no-startup-id export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
-
 # Set the background
 exec --no-startup-id feh --bg-center /home/haye/Backgrounds/showgaze_pb_02.png
 

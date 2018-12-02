@@ -1,5 +1,5 @@
 install:
-	sudo pacman -S --needed stow zsh curl gvim python3
+	sudo pacman -S --needed stow zsh curl gvim python3 feh
 	curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | zsh
 	rm -rf ${HOME}/{.zshrc,.vimrc,.vim,.gitconfig,.config/i3/config}
 	mkdir -p ~/.vim/autoload ~/.vim/bundle
